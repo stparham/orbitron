@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane fx:id="mainMenuRoot" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="593.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.65" xmlns:fx="http://javafx.com/fxml/1" fx:controller="main.MainMenuUIController">
+   <children>
+      <HBox alignment="TOP_RIGHT" prefHeight="250.0" prefWidth="1000.0" AnchorPane.rightAnchor="25.0" AnchorPane.topAnchor="25.0">
+         <children>
+            <Pane>
+               <children>
+                  <Label id="menuTitle" fx:id="menuTitle" alignment="CENTER_RIGHT" prefHeight="92.0" prefWidth="655.0" text="ORBITRON" textAlignment="CENTER" />
+                  <Label id="menuSubtitle" fx:id="menuSubtitle" alignment="CENTER_RIGHT" layoutY="92.0" prefHeight="17.0" prefWidth="655.0" text="the Superior Biological Entity Screening Program" textAlignment="RIGHT" />
+               </children>
+            </Pane>
+            <ImageView fitHeight="250.0" fitWidth="250.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="res/imgs/MainSymbol.png" />
+               </image>
+            </ImageView>
+         </children>
+      </HBox>
+      <VBox layoutX="150.0" layoutY="250.0" prefHeight="300.0" prefWidth="250.0" spacing="25.0" AnchorPane.leftAnchor="150.0" AnchorPane.topAnchor="250.0">
+         <children>
+            <Button fx:id="newSessBtn" mnemonicParsing="false" onAction="#showSaveSelector" onMouseEntered="#showLabel" onMouseExited="#hideLabel" prefHeight="50.0" prefWidth="250.0" text="NEW SESSION" />
+            <Button fx:id="loadSessBtn" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#showSaveSelector" onMouseEntered="#showLabel" onMouseExited="#hideLabel" prefHeight="50.0" prefWidth="250.0" text="LOAD SESSION" />
+            <Button fx:id="extrasBtn" layoutX="10.0" layoutY="60.0" mnemonicParsing="false" onAction="#showExtrasMenu" onMouseEntered="#showLabel" onMouseExited="#hideLabel" prefHeight="50.0" prefWidth="250.0" text="OPTION / EXTRAS" />
+            <Button fx:id="exitBtn" layoutX="10.0" layoutY="160.0" mnemonicParsing="false" onAction="#closeProgram" onMouseEntered="#showLabel" onMouseExited="#hideLabel" prefHeight="50.0" prefWidth="250.0" text="EXIT" />
+         </children>
+      </VBox>
+      <VBox layoutX="408.0" layoutY="242.0" prefHeight="300.0" prefWidth="450.0" spacing="25.0" AnchorPane.leftAnchor="425.0" AnchorPane.topAnchor="250.0">
+         <children>
+            <Label id="menuLabel" fx:id="newSessLbl" prefHeight="50.0" prefWidth="450.0" text="Start a new screening session" visible="false" />
+            <Label id="menuLabel" fx:id="loadSessLbl" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="450.0" text="Load a previous screening session" visible="false" />
+            <Label id="menuLabel" fx:id="extrasLbl" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="450.0" text="Options, highscores, etc." visible="false" />
+            <Label id="menuLabel" fx:id="exitLbl" layoutX="10.0" layoutY="10.0" prefHeight="50.0" prefWidth="450.0" text="Exit the game" visible="false" />
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>
